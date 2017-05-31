@@ -1,0 +1,644 @@
+/*整体*/
+.pc{
+    display: none;
+}
+.move{
+    display: block;
+}
+body, h1, h2, h3, p, div, ol, ul, input, button{
+    margin:0;
+    padding:0;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    min-width: 300px;
+}
+/*图标*/
+@font-face {
+    font-family: 'icons';
+    src: url('../iconfont/iconfont_c7ccca59.eot');
+    src: url('../iconfont/iconfont_c7ccca59.eot#iefix') format('embedded-opentype'), url('../iconfont/iconfont_c7ccca59.woff') format('woff'), url(../iconfont/iconfont_c7ccca59.ttf) format('truetype'), url('../iconfont/iconfont_c7ccca59.svg?#iconfont') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+input, button, textarea{
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-sizing: border-box;
+}
+#page,#index-card{
+    height: inherit;
+}
+#page{
+    background: #f1f1f1;
+}
+/*天气模块*/
+#weather{
+    -webkit-transition: height .3s linear;
+    transition: height .3s linear;
+    text-align: left;
+}
+#weather{
+    position: relative;
+    height:0;
+}
+.weather-outline{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    padding:0 6px;
+    height: 40px;
+    line-height: 40px;
+}
+.weather-outline{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 1;
+    padding:0 6px;
+    height: 40px;
+    line-height: 40px;
+}
+/*太阳图标*/
+.icon-weather-default{
+    color: #b7babe;
+    font-size: 28px;
+    position: relative;
+    top: 3px;
+    width:auto;
+    line-height: 35px;
+    margin-left:-1px;
+}
+.weather-outline > *, .weather-detail-sky > *{
+    display: inline-block;
+}
+#index-card [class^="icon-"], #index-card [class*=" icon-"], #index-view [class^="icon-"], #index-view [class*=" icon-"]{
+    font-family: icons;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+}
+/*31度*/
+.weather-outline > div.weather-num{
+    font-size: 20px;
+    color: #8c8c8c;
+    padding-left:2px;
+}
+/*右侧小字*/
+.weather-status{
+    position: relative;
+    padding:0 2px 0 7px ;
+    top:3px;
+}
+.weather-status p{
+    height: 13px;
+    line-height: 13px;
+    font-size: 11px;
+    color: #999;
+}
+#weather .icon-down:before{
+    content:'\e814';
+    color: #b6b7ba;
+    font:17px/1 icons;
+}
+/*头部*/
+#header{
+    padding-bottom: 10px;
+}
+#userinfo-wrap{
+    position: relative;
+    height: 54px;
+}
+/*login图标*/
+#login{
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    padding: 3px;
+    color: #9b9b9b;
+    font-size: 28px;
+    line-height: 20px;
+}
+/*顶部右侧图标*/
+#index-card [class^="icon-"], #index-card [class*=" icon-"], #index-view [class^="icon-"], #index-view [class*=" icon-"]{
+    font-family: icons;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width:.2px;
+}
+.icon-login:before{
+    content: '\e809';
+    color: #666;
+    font:24px/1 icons;
+}
+#skin{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 3px;
+    color: #9b9b9b;
+    font-size: 28px;
+    line-height: 20px;
+    z-index: 1;
+}
+#skin i:before{
+    content: '\e824';
+    color: #666;
+    font:24px/1 icons;
+}
+.noTapcolor{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+#logo{
+    height: 55px;
+    padding:17px 0 15px;
+}
+/*输入框*/
+#index-form{
+    margin:0 10px;
+    height: 42px;
+    background: #fff;
+    border:1px solid #949494;
+    border-bottom-color: #bcbcbc;
+}
+#index-form .con-wrap{
+    display: -webkit-box;
+    width: 100%;
+}
+#index-card .se-input, #index-card .se-encode{
+    display: block;
+    -webkit-box-flex: 1;
+    box-flex:1;
+    margin:2px 0;
+    padding: 6px 35px 6px 6px;
+    font-size:18px;
+    line-height: 24px;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0)
+}
+#index-card .se-input{
+    margin:0;
+    padding:7px 42px 7px 6px;
+    height: 42px;
+    line-height: 28px ;
+    resize: none;
+    overflow: hidden;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#index-card .se-inner{
+    width: 82px;
+    position: relative;
+    text-align: left;
+}
+#index-cross{
+    position: absolute;
+    top:0;
+    left: -35px;
+    width: 35px ;
+    height: 42px;
+    display: none;
+    background: url(//m.baidu.com/static/search/clear.png) no-repeat center;
+    background-size: 16px;
+    z-index: 2;
+}
+.callicon-wrap{
+    position: absolute;
+    top:0;
+    left:-38px ;
+    z-index: 10;
+}
+.baiduapp-icon{
+    width: 39px;
+    height: 39px;
+    text-align: left;
+}
+.baiduappcall-wrap{
+    position: absolute;
+    width: 108px;
+    top:51px;
+    left: -18px ;
+    height: 40px;
+    text-align: left;
+}
+/*百度一下*/
+#index-bn{
+    position: absolute;
+    top: -1px;
+    width: 82px;
+    height: 42px;
+    background: #38f;
+    color: #fff;
+    white-space: nowrap;
+    line-height: 42px;
+    letter-spacing: -1px;
+    font-size: 16px;
+    border-top:1px solid #38f;
+    border-bottom: 1px solid #38f;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+/*两行图标*/
+#navs{
+    margin:17px 0 14px;
+    overflow: hidden;
+}
+a{
+    text-decoration:none;
+
+}
+#navs a{
+    float: left;
+    width: 16%;
+    font-size:12px;
+    color: #666;
+}
+#navs a:first-child, #navs a:nth-child(7){
+     margin-left:2%;
+}
+#navs a:nth-child(n+7){
+    margin-top: 24px;
+}
+#navs a i{
+    display: block;
+    margin-bottom: 4px;
+    height: 24px;
+}
+.navs-news:before{
+    content: '\e799';
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-novel:before{
+    content: '\e801';
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-video:before{
+    content:'\e802' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-life:before{
+    content: '\e831';
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-map:before{
+    content:'\e804' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-more:before{
+    content:'\e812' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-tieba:before{
+    content:'\e805' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-app:before{
+    content:'\e820' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-image:before{
+    content:'\e811' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-website:before{
+    content:'\e807' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-extend:before{
+    content:'\e808' ;
+    color: #666;
+    font:24px/1 icons;
+}
+.navs-music:before{
+    content:'\e858' ;
+    color: #666;
+    font:24px/1 icons;
+}
+/*关注与推荐*/
+.menu-container{
+    height:40px;
+    text-align: center;
+    line-height: 41px;
+    border-bottom: 1px solid #6e6e6e;
+    margin-top: 6px;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    z-index: 2;
+    position: relative;
+}
+.menu-container .menu-item{
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    width: 16%;
+}
+.menu-container .menu-item:first-child{
+    padding-left:0;
+}
+.menu-container .menu-item.current{
+    color: #38f;
+}
+.slider{
+    width:13%;
+    height: 2px;
+    background: #38f;
+    margin-top:-2px;
+}
+.current0{
+    -webkit-transform: translateX(393.5%);
+    -moz-transform: translateX(393.5%);
+    -ms-transform: translateX(393.5%);
+    -o-transform: translateX(393.5%);
+    transform: translateX(393.5%);
+    -webkit-transition: transform .2s linear;
+    -moz-transition: transform .2s linear;
+    -ms-transition: transform .2s linear;
+    -o-transition: transform .2s linear;
+    transition: transform .2s linear;
+    transition-duration: .2s;
+}
+/*实时新闻*/
+.blank-frame{
+    background: #f0f0f0;
+}
+#tab_news{
+    text-align: left;
+}
+#tab_news .tab-news-content{
+    background: #fff;
+}
+.tab-news-content .news-list-wrapper:first-child > div:first-child{
+    border-top:0;
+}
+.tab-news-content .news-item a{
+    margin:0 21px;
+    border-top:1px solid #f0f0f0;
+    padding:15px 0;
+    display: block;
+}
+.tab-news-content .news-list-wrapper:first-child div:first-child a{
+    border-top:none !important;
+}
+.tab-news-content .news-item h2{
+    font-weight: normal;
+    color: #333;
+    font-size:18px;
+    line-height:26px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+/*无图新闻*/
+.tab-news-content .tpl-1 .text-content h2{
+    -webkit-line-clamp:2;
+}
+.tab-news-content .news-item .hotRec{
+    display: none;
+    width: 17px;
+    height: 17px;
+    background-image: url("//m.baidu.com/static/index/plus/public/tab_news.png");
+    background-size: 98px 41px;
+    position: relative;
+    top: 3px;
+    margin-left: 6px;
+}
+.tab-news-content .news-item .hotRec-1{
+    display: none;
+}
+.tab-news-content .news-item .news-from{
+    margin-top: 8px;
+    line-height:13px;
+}
+/*第二行小字*/
+.tab-news-content .tpl-1 .news-from{
+    margin-top:9px;
+}
+.tab-news-content .news-item .news-from span{
+    margin-right: 8px;
+    font-size: 13px;
+    color: #999;
+    display: inline-block;
+    height: 13px;
+    vertical-align: top;
+}
+/*左侧一个图的新闻*/
+.tab-news-content .tpl-2 a{
+    position: relative;
+    padding-top: 15px;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+}
+.tab-news-content .tpl-2 .info-content{
+    width:67.88%;
+    -webkit-box-ordinal-group: 2;
+    order:2;
+}
+.tab-news-content .tpl-2 .info-content > div{
+    margin-left: 14px;
+}
+
+.tab-news-content .tpl-2 .text-content h2{
+    -webkit-line-clamp:2;
+}
+.tab-news-content .news-item .hotRec0{
+    background-position:0 0;
+    background-color: #ffe4e4;
+}
+.tab-news-content .news-item .news-from .src-icon0{
+    color:#f13f40;
+    font-size: 11px;
+    border: 1px solid #efb9b9;
+    box-sizing: border-box;
+    display: inline;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+}
+.tab-news-content .tpl-2 .pic-content{
+    width: 33.65%;
+    height: 0;
+    padding-top: 21.955%;
+    position: relative;
+}
+.tab-news-content .tpl-2 .pic-content img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.clr:after{
+    content:'\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+/*三个图的新闻*/
+.tab-news-content .tpl-3 a{
+    padding: 0 0 15px 0;
+    min-height: 118px;
+}
+.tab-news-content .tpl-3 a .text-content{
+    padding-top: 11px;
+    margin-bottom: 0;
+}
+.tab-news-content .tpl-3 a .pic-content{
+    margin-top:8px;
+    margin-bottom: 12px;
+}
+.tab-news-content .news-item .img-wrap{
+    display: inline-block;
+    width: 33.09%;
+    margin-right: -3px;
+    height: 0;
+    padding-top:21.955%;
+    position: relative;
+    vertical-align: top;
+}
+.tab-news-content .news-item .img-wrap img{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+/*正在加载*/
+.s-loading-frame{
+    height: 58px;
+    text-align: center;
+}
+.loading-content{
+    height: 20px;
+    line-height: 20px;
+    padding-top: 10px;
+}
+.load-effect{
+    display: inline-block;
+    vertical-align: middle;
+    width:18px;
+    height: 18px;
+    background:url(//m.baidu.com/static/index/plus/public/loading.png) no-repeat 0 0;
+    background: 100%;
+    animation-name:loadRotate;
+    animation-duration:1.3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+.s-loading-frame .load-text{
+    margin-left: 13px;
+    vertical-align: middle;
+    color: #ccc;
+    font-size: 12px;
+}
+/*脚部*/
+#foot{
+    margin:10px 28px 0;
+}
+#foot div{
+    overflow: hidden;
+    text-align: center;
+}
+#foot div a{
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    width:95px;
+    line-height: 34px;
+    color: #666;
+    font-size:13px;
+}
+#foot div a .icon-feedback{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: inline-block;
+    width: 16px;
+    height:16px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAlUlEQVRIx+3WwQ3AIAgFUEfXg01n6EQu4hy0A2iQ/yGmiYd/fgaBkEQk7Ug68IHD4dZa/yKO6auweOfAKsw0zT9hp1w74DKrRCSctW+IgPMIG+GecF1ttCnssYu1uQ6BV5YKW+oHQVn4RlEGLgyKwplFEbh6oHRXo6jLOCGoudTaGrQ8GoZHOHplmmFmy5nO29kjEfgFKVQDsNj13egAAAAASUVORK5CYII=) no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+#index-copyright, .recordcode{
+    display: block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    padding:6px 0 0;
+    color: #999;
+}
+.recordcode{
+    height: 12px;
+    line-height:12px;
+    padding:6px 0 20px;
+}
+.recordcode i{
+    display: inline-block;
+    width: 12px;
+    height:12px;
+    background: url(//m.baidu.com/static/index/plus/public/icon_police.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 5px;
+    vertical-align: top;
+}
+ul,ol{
+    list-style: none;
+    margin: 0;
+}
+/*底部三行左侧图标*/
+.vhx61{
+    margin:0 28px;
+    text-align: left;
+}
+.vhx61 li{
+    height: 33px;
+    line-height: 33px;
+    text-align: left;
+    display: list-item;
+}
+.vhx61 a{
+    position: relative;
+    height: 33px;
+    overflow: hidden;
+    display: block;
+    padding-left: 21px;
+    font-size: 13px;
+    color: #555;
+    background: none no-repeat 0 center;
+    -webkit-webkit-background-size: 15px 11px;
+
+}
+.vhx61 .hotIcon a:after{
+    content: '\e626';
+    position: absolute;
+    top: 6px;
+    left: -3px;
+    font:21px/1 icons;
+    color: #ed5353;
+}
+.vhx61 .baiduIcon a{
+    background-image:url(https://m.baidu.com/static/index/icon/w_icon2.png);
+    background-size: 15px 15px;
+}
+.vhx61 .hotIcon a:after{
+    content: '\e626';
+    position: absolute;
+    top:6px;
+    left: -3px;
+    font:21px/1 icons;
+    color: #ed5353;
+}

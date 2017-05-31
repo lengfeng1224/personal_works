@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<!--顶部nav-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">个人信息系统管理</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Hi,LuNing!</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search....">
+                </form>
+            </div>
+        </div>
+    </nav>
+<!--主体-->
+    <article>
+        <div class="contain-fluid">
+            <div class="row">
+                <!--左侧nav-->
+                <div class="col-md-2 sidebar">
+                    <ul id="main-nav" class="nav nav-tabs nav-stacked">
+                        <li class="">
+                            <a href="#" class="list-group-item disabled"><i class="glyphicon glyphicon-th-large disabled"></i>首页</a>
+                        </li>
+                        <li>
+                            <a href="#systemSetting" class="nav-header e9e9e9"  data-toggle="collapse">
+                                <i class="glyphicon glyphicon-cog"></i>
+                                系统管理
+                                <span class="pull-right glyphicon glyphicon-chevron-down" ></span>
+                            </a>
+                            <ul  id="systemSetting" class="nav nav-list collapse ">
+                                <li><a href="#"><i class="glyphicon glyphicon-user"></i> &nbsp;用户管理</a> </li>
+                                <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>&nbsp;菜单管理</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i>&nbsp;角色管理</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-edit"></i>&nbsp;修改密码</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;日志查看</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-credit-card"></i> 物料管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-globe"></i> 分发配置
+                                <span class="label label-warning pull-right">5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-calendar"></i> 图表统计
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-fire"></i> 关于系统
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--右侧-->
+                <div class="col-md-10 col-md-offset-2 main">
+                    <div class="jumbotron">
+                        <div class="container">
+                            <h1>Hello, world!</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

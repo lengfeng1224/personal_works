@@ -1,0 +1,147 @@
+*{
+	 margin:0;
+	 padding: 0;
+}
+.content{
+	position: absolute;
+	left: 400px;
+	top: 100px;
+	width: 400px;
+	height: 400px;
+	margin: 80px auto 0 auto;
+
+}
+/*魔方包裹层*/
+.wrap{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	/*-webkit-perspective:500;/*透视距离*/
+	/*perspective:500;*/
+	-webkit-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	/*视点*/
+	/*-webkit-perspective-origin:35% 35%;*/
+	
+	-webkit-animation:animation ease-in-out infinite 3s;
+	-moz-animation:animation ease-in-out infinite 3s;
+	animation: animation ease-in-out infinite 3s;
+}
+@-webkit-keyframes animation {
+
+	0%{-webkit-transform:rotateY(0deg);}
+	25%{-webkit-transform:rotateY(90deg) rotateZ(135deg); }
+	50%{-webkit-transform:rotateY(180deg) rotateZ(135deg);}
+	75%{-webkit-transform:rotateY(270deg) rotateX(135deg);}
+	100%{-webkit-transform:rotateY(360deg);}
+}
+@-moz-keyframes animation {
+
+	0%{-moz-transform:rotateY(0deg);}
+	25%{-moz-transform:rotateY(90deg) rotateZ(135deg); }
+	50%{-moz-transform:rotateY(180deg) rotateZ(135deg);}
+	75%{-moz-transform:rotateY(270deg) rotateX(135deg);}
+	100%{-moz-transform:rotateY(360deg);}
+}
+@keyframes animation {
+
+	0%{transform:rotateY(0deg);}
+	25%{transform:rotateY(90deg) rotateZ(135deg); }
+	50%{transform:rotateY(180deg) rotateZ(135deg);}
+	75%{transform:rotateY(270deg) rotateX(135deg);}
+	100%{transform:rotateY(360deg);}
+}
+/*每个面的大小*/
+.a{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	font-size: 60px;
+}
+.a1{
+	-webkit-transform:translateZ(150px);
+	-moz-transform:translateZ(150px);
+	transform:translateZ(150px);
+}
+.a2{
+	background-color:rgba(85,200,248,0.5); 
+	-webkit-transform:translateZ(-150px);
+	-moz-transform:translateZ(-150px);
+	transform:translateZ(-150px);
+	
+}
+.a3{
+	background-color:rgba(185,200,248,0.5); 
+	-webkit-transform:rotateX(90deg) translateZ(150px);
+	-moz-transform:rotateX(90deg) translateZ(150px);
+	transform:rotateX(90deg) translateZ(150px);
+	
+}
+.a4{
+	background-color:rgba(185,120,248,0.5); 
+	-webkit-transform:rotateX(-90deg) translateZ(150px);
+	-moz-transform:rotateX(-90deg) translateZ(150px);
+	transform:rotateX(-90deg) translateZ(150px);
+}
+.a5{
+	background-color:rgba(185,200,148,0.5); 
+	-webkit-transform:rotateY(90deg) translateZ(150px);
+	-moz-transform:rotateY(90deg) translateZ(150px);
+	transform:rotateY(90deg) translateZ(150px);
+}
+.a6{
+	background-color:rgba(185,100,48,0.5); 
+	-webkit-transform:rotateY(-90deg) translateZ(150px);
+	-moz-transform:rotateY(-90deg) translateZ(150px);
+	transform:rotateY(-90deg) translateZ(150px);
+}
+/*每个面里的9个小方形*/
+.a1 div{
+	width: 96px;
+	height: 96px;
+	margin: 2px 2px;
+	float: left;
+	border-radius: 10px;
+	background-color: red;
+}
+.a2 div{
+	width: 96px;
+	height: 96px;
+	margin: 2px 2px;
+	float: left;
+	border-radius: 10px;
+	background-color: blue;
+}
+.a3 div{
+	width: 96px;
+	height: 96px;
+	margin: 2px 2px;
+	float: left;
+	border-radius: 10px;
+	background-color: green;
+}
+.a4 div{
+	width: 96px;
+	height: 96px;
+	margin: 2px 2px;
+	float: left;
+	border-radius: 10px;
+	background-color: yellow;
+}
+.a5 div{
+	width: 96px;
+	height: 96px;
+	margin: 2px 2px;
+	float: left;
+	border-radius: 10px;
+	background-color: #00FDF0;
+}
+.a6 div{
+	width: 96px;
+	height: 96px;
+	margin: 2px 2px;
+	float: left;
+	border-radius: 10px;
+	background-color: #FF00B9;
+}
